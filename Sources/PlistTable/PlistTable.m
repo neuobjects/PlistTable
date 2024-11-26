@@ -40,7 +40,7 @@
   NSArray<NSString *> *components = [fullResourceName componentsSeparatedByString:@"."];
   NSString *resourceName = [components lastObject];
   NSString *dataPath = [[NSBundle mainBundle] pathForResource:resourceName ofType:@"plist"];
-  NSLog(@"dataPath:%@", dataPath);
+  //NSLog(@"dataPath:%@", dataPath);
   plistTable.rawContents = [NSArray arrayWithContentsOfFile:dataPath];
   if ([plistTable.rawContents count] > 0)
   {
@@ -73,7 +73,7 @@
   plistTable.relationships = [NSMutableDictionary<NSString *, NSDictionary *> dictionary];
   
   NSString *dataPath = [[NSBundle mainBundle] pathForResource:resourceName ofType:@"plist"];
-  NSLog(@"dataPath:%@", dataPath);
+  //NSLog(@"dataPath:%@", dataPath);
   plistTable.rawContents = [NSArray arrayWithContentsOfFile:dataPath];
   if ([plistTable.rawContents count] > 0)
   {
